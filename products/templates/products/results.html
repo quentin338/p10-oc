@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Résultats {{ user_search }}{% endblock %}
+
+{% block product_name %}{{ user_search|capfirst }}{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      {% for product in better_products %}
+        <div class="col-md-4 product-display">
+          <a href="{% url "products:product_details" product_id=product.code %}">
+            <img src="{{ product.image_url }}" alt="Image du produit" class="product-img" width=100 />
+            <img src="{% static "core/img/nutriscore/"|add:product.nutriscore_img %}" class="nutriscore-img" alt="Nutriscore"/>
+            <h3>{{ product.name|truncatechars:36 }}</h3></a>
+          {% if user.is_authenticated %}
+            {% if product.is_favorite %}
+              <button onclick="onClickHandler(event)" class="btn btn-danger btn-xs remove-fav" data-code="{{ product.code }}" data-old-code="{{ old_product.code }}">
+                <i class="far fa-trash-alt" aria-hidden="true"></i> Favori</button>
+            {% else %}
+              <button onclick="onClickHandler(event)" class="btn btn-success btn-xs add-fav" data-code="{{ product.code }}" data-old-code="{{ old_product.code }}">
+                <i class="far fa-heart" aria-hidden="true"></i> Favori</button>
+            {% endif %}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block script %}
+  {{ block.super }}
+  {% include "../favorites/fav_button.html" %}
+{% endblock %}

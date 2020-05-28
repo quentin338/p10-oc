@@ -1,0 +1,40 @@
+{% if user.is_authenticated %}
+  <script>
+    function addFavorite(old_code, new_code) {
+        $.post("{% url "favorites:user_favorites_add" %}",
+            {old_product_code: old_code, new_product_code: new_code}, function(data) {
+          console.log("fav added !");
+            });
+    }
+
+    function deleteFavorite(old_code, new_code) {
+        $.post("{% url "favorites:user_favorites_delete" %}",
+            {old_product_code: old_code, new_product_code: new_code}, function(data) {
+              console.log("fav removed !");
+            });
+    }
+
+  function onClickHandler(e) {
+    const old_code = e.target.getAttribute("data-old-code");
+    const new_code = e.target.getAttribute("data-code");
+
+    if (e.target.classList.contains("add-fav")) {
+        addFavorite(old_code, new_code);
+    }
+    else {
+        deleteFavorite(old_code, new_code);
+    }
+
+    const classes_btn = ["add-fav", "remove-fav", "btn-success", "btn-danger"];
+    for (let cls of classes_btn) {
+        e.target.classList.toggle(cls);
+      }
+
+    const classes_fa = ["fa-heart", "fa-trash-alt"];
+    let iElt = e.target.children[0];
+    for (let fontClass of classes_fa) {
+        iElt.classList.toggle(fontClass);
+    }
+  }
+  </script>
+{% endif %}

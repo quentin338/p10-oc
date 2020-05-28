@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Produit: {{ product.name }}{% endblock %}
+
+{% block product_name %}
+  <section class="page-section bg-product text-white" style="background-image: url('{{ product.image_url }}')">
+    <div class="container text-center">
+      <h2 class="mb-4">{{ product.name }}</h2>
+    </div>
+  </section>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 text-center my-2">
+        <img src="{% static "core/img/nutriscore/"|add:product.nutriscore_full_img %}" alt="Grade nutriscore" />
+      </div>
+      <div class="col-lg-4 text-center my-2">
+        <img src="{{ product.ingredients_image }}" alt="Ingrédients du produit" />
+      </div>
+    </div>
+  <div class="row">
+    <div class="col-md-12 text-center mt-4">
+      <a class="btn btn-primary btn-xl btn-prod-openff" href="{{ product.url }}" target="_blank">Voir la fiche d'OpenFoodFacts</a>
+    </div>
+  </div>
+  </div>
+{% endblock %}

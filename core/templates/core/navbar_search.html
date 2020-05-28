@@ -1,0 +1,9 @@
+{% extends "core/navbar.html" %}
+
+{% block navsearch %}
+  <li class="nav-item">
+    <form action="{% url 'products:product_search' %}" method="get" class="search-form">
+      {{ form.as_p }}
+    </form>
+  </li>
+{% endblock %}

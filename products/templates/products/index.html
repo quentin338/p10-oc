@@ -1,0 +1,15 @@
+{% extends 'core/home.html' %}
+
+
+{% block intro %}Du gras, oui, mais de qualité !{% endblock %}
+
+{% block masthead_title %}
+  Trouvez un produit de substitution pour ceux que vous consommez tous les jours.
+{% endblock %}
+
+{% block search %}
+  <form action="{% url 'products:product_search' %}" method="get" class="search-form">
+    {{ form.as_p }}
+    <input class="btn btn-light" type="submit" value="Rechercher"/>
+  </form>
+{% endblock %}

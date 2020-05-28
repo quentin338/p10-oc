@@ -1,0 +1,50 @@
+{% extends "core/base_masthead.html" %}
+
+{% block content %}
+  {{ block.super }}
+
+  {% block story %}
+    <!-- About Section -->
+    <section class="page-section bg-primary" id="about">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="text-white mt-0">Colette et Rémy</h2>
+            <hr class="divider light my-4">
+            <p class="text-white-50 mb-4">Colette Tatou : "Nous aimons tous manger, surtout en France ! Personnellement, une baguette fraîche, du bon fromage de chèvre et un bon vin rouge me suffisent amplement. Comme tout le monde, je fais mes courses au supermarché. Mais petit à petit je me suis rendue compte, surtout lorsque nous avons ouvert le restaurant, que je pouvais remplacer les produits aseptisés que j'avais l'habitude d'acheter par de bons produits du terroir Et souvent pour le même prix !"</p>
+            {% load static %}
+            <img class="portrait-col" src="{% static 'core/img/portraits/colette-tatou-full.png' %}">
+            <img class="portrait-rat" src="{% static 'core/img/portraits/remy-nobg.png' %}">
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endblock %}
+
+  {% block contact %}
+    <!-- Contact Section -->
+    <section class="page-section" id="contact">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="mt-0">Contactez-nous !</h2>
+            <hr class="divider my-4">
+            <p class="text-muted mb-5">Notre équipe est à votre écoute 24 heures sur 24 !</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+            <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+            <div>01 02 03 04 05</div>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+            <!-- Make sure to change the email address in anchor text AND the link below! -->
+            <a class="d-block" href="mailto:direct@danslesspams.com">support@purbeurre.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endblock %}
+
+{% endblock %}

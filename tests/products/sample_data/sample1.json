@@ -1,0 +1,94 @@
+{
+    "products": [
+        {
+        "code": 12345,
+        "name": "Best Saucisson sec",
+        "image_url": "http://www.lesaucissonsec.com",
+        "nutriscore": 1,
+        "nutriscore_grade": "a",
+        "ingredients_image": "http://www.stock-image.com/saucisson-sec.jpg",
+        "category": ""
+        },
+        {
+        "code": 123451,
+        "name": "Saucisson sec",
+        "image_url": "http://www.lesaucissonsec.com",
+        "nutriscore": 10,
+        "nutriscore_grade": "b",
+        "ingredients_image": "http://www.stock-image.com/saucisson-sec.jpg",
+        "category": ""
+        },
+        {
+        "code": 54321,
+        "name": "Saucisson sec 2",
+        "image_url": "http://www.lesaucissonsec.com",
+        "nutriscore": 10,
+        "nutriscore_grade": "",
+        "ingredients_image": "http://www.stock-image.com/saucisson-sec.jpg",
+        "category": ""
+        },
+        {
+        "code": 123453,
+        "name": "Saucisson sec 3",
+        "image_url": "http://www.lesaucissonsec.com",
+        "nutriscore": 10,
+        "nutriscore_grade": "b",
+        "ingredients_image": "http://www.stock-image.com/saucisson-sec.jpg",
+        "category": ""
+        },
+        {
+        "code": 123454,
+        "name": "Saucisson sec 9",
+        "image_url": "http://www.lesaucissonsec.com",
+        "nutriscore": 10,
+        "nutriscore_grade": "c",
+        "ingredients_image": "http://www.stock-image.com/saucisson-sec.jpg",
+        "category": ""
+        },
+        {
+        "code": 98765,
+        "name": "Worst Saucisson sec",
+        "image_url": "http://www.lesaucissonsec.com",
+        "nutriscore": 100,
+        "nutriscore_grade": "d",
+        "ingredients_image": "http://www.stock-image.com/saucisson-sec.jpg",
+        "category": ""
+        },
+        {
+        "code": 123456,
+        "name": "Saucisson sec 5",
+        "image_url": "http://www.lesaucissonsec.com",
+        "nutriscore": 10,
+        "nutriscore_grade": "c",
+        "ingredients_image": "http://www.stock-image.com/saucisson-sec.jpg",
+        "category": ""
+        },
+        {
+        "code": 123457,
+        "name": "Saucisson sec 6",
+        "image_url": "http://www.lesaucissonsec.com",
+        "nutriscore": 10,
+        "nutriscore_grade": "c",
+        "ingredients_image": "http://www.stock-image.com/saucisson-sec.jpg",
+        "category": ""
+        },
+        {
+        "code": 123458,
+        "name": "Saucisson sec 7",
+        "image_url": "http://www.lesaucissonsec.com",
+        "nutriscore": 10,
+        "nutriscore_grade": "c",
+        "ingredients_image": "http://www.stock-image.com/saucisson-sec.jpg",
+        "category": ""
+        },
+        {
+        "code": 123459,
+        "name": "Saucisson sec 8",
+        "image_url": "http://www.lesaucissonsec.com",
+        "nutriscore": 10,
+        "nutriscore_grade": "c",
+        "ingredients_image": "http://www.stock-image.com/saucisson-sec.jpg",
+        "category": ""
+        }
+    ]
+}

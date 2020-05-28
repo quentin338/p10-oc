@@ -1,0 +1,142 @@
+.logo-purbeurre {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 3px;
+}
+
+.carrot-icon {
+    width: 30px;
+    height: 23px;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.navbar-nav .carrot-icon {
+    filter: invert(78%) sepia(0%) saturate(1657%) hue-rotate(148deg) brightness(95%) contrast(103%);
+}
+
+.carrot-icon:hover {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(259deg) brightness(106%) contrast(101%);
+}
+
+.navbar-scrolled .carrot-icon {
+    filter: invert(0%) sepia(100%) saturate(2%) hue-rotate(105deg) brightness(101%) contrast(100%);
+}
+
+.navbar-scrolled .carrot-icon:hover {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+label {
+    color: white;
+}
+
+.portrait-rat {
+    width: 12rem;
+    height: 18rem;
+    margin: 0 3rem 0;
+}
+
+.portrait-col {
+    width: 10rem;
+    height: 20rem;
+    margin: 0 3rem 0;
+}
+
+.password-field {
+    margin-right: 4.1rem;
+}
+
+.product-display {
+    /*display: flex;*/
+    border: #1c7430 solid 1px;
+    margin-top: 1rem;
+}
+
+.product-img {
+    /*max-width: 18rem;*/
+    /*max-height: 18rem;*/
+    /*width: auto;*/
+    /*height: auto;*/
+    margin: 1rem 0;
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 18rem;
+    height: 18rem;
+}
+
+.nutriscore-img {
+    border-radius: 50%;
+    width: 3rem;
+    position: relative;
+    right: 1.70rem;
+    bottom: 8rem;
+}
+
+.favorite-nutriscore-img {
+    border-radius: 50%;
+    width: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.2rem;
+}
+
+.add-fav, .remove-fav {
+    margin-bottom: 1rem;
+}
+
+.bg-product {
+    background-repeat: no-repeat;
+}
+
+.ctx-message {
+    width: 40rem;
+    margin: auto;
+    border: 2px solid white;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+@media (max-width: 1199px) {
+    .product-img {
+        max-width: 15rem;
+        max-height: 15rem;
+    }
+
+    .nutriscore-img {
+    width: 2.5rem;
+    right: 1.4rem;
+    bottom: 7.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .product-img {
+        max-width: 10rem;
+        max-height: 10rem;
+    }
+
+    .nutriscore-img {
+    width: 2.2rem;
+    right: 1.3rem;
+    bottom: 4.8rem;
+    }
+
+    .burger-menu {
+    display: inline;
+    }
+}
+
+@media (max-width: 767px) {
+    .product-img {
+        max-width: 15rem;
+        max-height: 15rem;
+    }
+
+    .nutriscore-img {
+    width: 3rem;
+    right: 1.7rem;
+    bottom: 6.8rem;
+    }
+}

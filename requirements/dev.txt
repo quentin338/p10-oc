@@ -1,0 +1,5 @@
+-r prod.txt
+python-dotenv==0.10.3
+coverage==5.1
+model-bakery==1.1.0
+selenium==3.141.0

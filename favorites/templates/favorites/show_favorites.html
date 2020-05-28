@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Vos Favoris{% endblock %}
+{% block product_name %}Vos Favoris{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      {% for favorite in favorites %}
+        <div class="col-md-4 product-display">
+          <a href="{% url "products:product_details" product_id=favorite.new_product.code %}">
+            <img src="{{ favorite.new_product.image_url }}" alt="Image du produit" class="product-img" width=100 />
+            <img src="{% static "core/img/nutriscore/"|add:favorite.new_product.nutriscore_img %}" class="nutriscore-img" alt="Nutriscore"/>
+            <h3>{{ favorite.new_product.name|truncatechars:36 }}</h3></a>
+            <a href="{% url "products:product_details" product_id=favorite.ancient_product.code %}">{{ favorite.ancient_product.name|truncatechars:35 }}
+            <img src="{% static "core/img/nutriscore/"|add:favorite.ancient_product.nutriscore_img %}" class="favorite-nutriscore-img" alt="Nutriscore"/></a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+

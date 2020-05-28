@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+{% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Pur Beurre - {% block title %}Trouvez des produits sains{% endblock %}</title>
+
+  <!-- Font Awesome Icons -->
+{#  <link href='{% static "core/vendor/fontawesome-free/css/all.min.css" %}' rel="stylesheet" type="text/css">#}
+  <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet" type="text/css">
+
+  <!-- Plugin CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!-- Theme CSS - Includes Bootstrap -->
+{#  <link href='{% static "core/css/creative.min.css" %}' rel="stylesheet">#}
+  <link href='{% static "dist/css/styles.css" %}' rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'core/img/logo_pur_beurre-favicon.png' %}">
+{% endblock %}
+</head>
+
+<body id="page-top">
+
+{% block navbar %}
+ {% include "core/navbar_search.html" %}
+{% endblock %}
+
+{% block picture_product %}
+  <!-- Call to Action Section -->
+  <section class="page-section bg-dark text-white">
+    <div class="container text-center">
+      <h2 class="mb-4">{% block product_name %}{% endblock %}</h2>
+{#      <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>#}
+    </div>
+  </section>
+{% endblock %}
+
+
+{% block content %}{% endblock %}
+
+
+{% block footer %}
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container">
+{#      <div class="col-lg-4 small text-center text-muted">Copyright &copy; 2019 - Start Bootstrap</div>#}
+      <div class="row">
+        <div class="col-lg-6 small text-center text-muted">
+          <a href="#nothing">Mentions légales</a>
+        </div>
+        <div class="col-lg-6 small text-center text-muted">
+          <a href="mailto:direct@danslesspams.com">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+{% endblock %}
+
+{% block script %}
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <!-- Custom scripts for this template -->
+{#  <script src='{% static "core/js/creative.min.js" %}'></script>#}
+
+  <script src='{% static "core/js/jquery-ui.min.js" %}'></script>
+  <script src='{% static "src/js/scripts.js" %}'></script>
+  
+  <script type="text/javascript">$(".search-form").autocomplete({
+    source: "{% url 'products:product_autocomplete' %}",
+    minLength: 3
+  });
+  </script>
+  <script>{% include "core/csrftoken.js" %}</script>
+{% endblock %}
+
+</body>
+
+</html>

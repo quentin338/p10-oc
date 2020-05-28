@@ -1,0 +1,12 @@
+{% extends "core/base_masthead.html" %}
+
+{% block title %}Se connecter{% endblock %}
+{% block intro %}Connexion{% endblock %}
+
+{% block search %}
+  <form action="{% url 'users:user_check_login' %}" method="get" class="form-login">
+    {{ user_form.as_p }}
+    <input class="btn btn-light btn-xl" type="submit" value="Se connecter"/>
+  </form>
+  <a class="btn btn-light btn-xl mt-2" href="{% url 'users:user_registration' %}">Créer un compte</a>
+{% endblock %}
