@@ -4,7 +4,7 @@ python:
 
 branches:
   only:
-    - master
+    - staging
 
 before_script:
   - pip install -r requirements/dev.txt
