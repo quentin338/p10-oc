@@ -34,7 +34,7 @@
 {% endblock %}
 </head>
 
-<body id="page-top">
+<body class="d-flex flex-column min-vh-100 justify-content-between" id="page-top">
 
 {% block navbar %}
  {% include "core/navbar_search.html" %}
@@ -42,7 +42,7 @@
 
 {% block picture_product %}
   <!-- Call to Action Section -->
-  <section class="page-section bg-dark text-white">
+  <section class="page-section bg-gradient text-white">
     <div class="container text-center">
       <h2 class="mb-4">{% block product_name %}{% endblock %}</h2>
 {#      <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>#}
@@ -56,12 +56,12 @@
 
 {% block footer %}
   <!-- Footer -->
-  <footer class="bg-light py-5">
+  <footer class="bg-light py-5 mt-3">
     <div class="container">
 {#      <div class="col-lg-4 small text-center text-muted">Copyright &copy; 2019 - Start Bootstrap</div>#}
       <div class="row">
         <div class="col-lg-6 small text-center text-muted">
-          <a href="#nothing">Mentions légales</a>
+          <a href="{% url 'core:legal_mentions' %}">Mentions légales</a>
         </div>
         <div class="col-lg-6 small text-center text-muted">
           <a href="mailto:direct@danslesspams.com">Contact</a>

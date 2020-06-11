@@ -22,4 +22,5 @@ urlpatterns = [
     # path('products/', include('products.urls')),
     path('favorites/', include('favorites.urls', namespace="favorites")),
     path('users/', include('users.urls')),
+    path('legal/', include('core.urls'))
 ]

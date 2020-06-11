@@ -105,12 +105,12 @@ class OpenFoodFactsAPI:
                             'code': product['code'],
                             'name': html.unescape(product['product_name_fr']),
                             'image_url': product['image_url'],
-                            'nutriscore': product['nutriscore_score'],
+                            'nutriscore': int(product['nutriscore_score']),
                             'nutriscore_grade': product['nutriscore_grade'],
                             'ingredients_image': product['selected_images']['ingredients']['display']['fr'],
                             'category': category
                         }
-                    except KeyError:
+                    except (KeyError, ValueError):
                         continue
 
                     # One value is missing or the grade is not valid
