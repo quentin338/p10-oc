@@ -1,11 +1,16 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 from django.test import LiveServerTestCase
 
 
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+
+
 class AccountTestCase(LiveServerTestCase):
     def setUp(self) -> None:
-        self.selenium = webdriver.Chrome()
+        self.selenium = webdriver.Chrome(options=chrome_options)
         self.selenium.implicitly_wait(5)
         super(AccountTestCase, self).setUp()
 
@@ -27,6 +32,6 @@ class AccountTestCase(LiveServerTestCase):
         submit_button = self.selenium.find_element_by_css_selector("input.btn-light")
         submit_button.click()
 
-        self.selenium.find_element_by_class_name("fa-sign-out")
+        self.selenium.find_element_by_class_name("fa-sign-out-alt")
 
         self.assertIn("users/logout/", self.selenium.page_source)

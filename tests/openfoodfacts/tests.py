@@ -27,7 +27,7 @@ class TestOpenFoodFactsAPI(TestCase):
                     "code": 12345,
                     "product_name_fr": "Saucisson sec",
                     "image_url": "http://www.saucissonsec.com",
-                    "nutrition_score_debug": "FR at the end of the string -- fr 10",
+                    "nutriscore_score": "10",
                     "nutriscore_grade": "a",
                     "category": "Charcuterie",
                     "countries_lc": "fr",
@@ -45,7 +45,7 @@ class TestOpenFoodFactsAPI(TestCase):
                     "code": 999,
                     "product_name_fr": "Saucisson sec",
                     "image_url": "http://www.saucissonsec.com",
-                    "nutrition_score_debug": "FR at the end of the string -- fr 10",
+                    "nutriscore_score": "10",
                     "nutriscore_grade": "a",
                     "category": "Charcuterie",
                     "countries_lc": "fr",
@@ -212,7 +212,7 @@ class TestOpenFoodFactsAPI(TestCase):
         self.mock_response.status_code = 200
         # Modifying first product to have a bad nutriscore
         products = json.loads(self.response_content_prod)
-        products['products'][0]['nutrition_score_debug'] = "string and not int -- fr"
+        products['products'][0]['nutriscore_score'] = "string and not int -- fr"
         self.mock_response.content = json.dumps(products)
 
         api = OpenFoodFactsAPI(1, 1, ['Boissons'])
