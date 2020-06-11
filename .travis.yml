@@ -2,12 +2,16 @@ language: python
 python:
   - '3.7'
 
+addons:
+  chrome: stable
+
 branches:
   only:
     - master
 
 before_script:
   - pip install -r requirements/dev.txt
+  - install-webdrivers
 
 env: DJANGO_SETTINGS_MODULE="purbeurre.settings.travis"
 
