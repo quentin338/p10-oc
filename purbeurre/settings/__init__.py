@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = "4eg6=*g(ukgw(^c733^xj*-m%y+sgr9l@qsxw7=wv!x_@j8oyv"
 
 
 ALLOWED_HOSTS = ["localhost"]
