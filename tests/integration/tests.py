@@ -6,6 +6,7 @@ from django.test import LiveServerTestCase
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
+chrome_options.add_argument('window-size=1920x1080')
 
 
 class AccountTestCase(LiveServerTestCase):
