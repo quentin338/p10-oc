@@ -16,11 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
+def test(request):
+    div = 1 / 0
+
+
 urlpatterns = [
     path('', include('products.urls', namespace="products")),
     path('admin/', admin.site.urls),
     # path('products/', include('products.urls')),
     path('favorites/', include('favorites.urls', namespace="favorites")),
     path('users/', include('users.urls')),
-    path('legal/', include('core.urls'))
+    path('legal/', include('core.urls')),
+    path('sentry/', test)
 ]
