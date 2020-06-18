@@ -92,7 +92,7 @@ class ProductViewTests(TestCase):
     def test_index_form(self):
         response = self.client.get(reverse('products:index'))
         self.assertHTMLEqual('<tr><th></th><td><input type="text" name="search"'
-                             ' class="search-form" maxlength="100" required id="id_search">'
+                             ' class="bg-nav-search search-form" maxlength="100" required id="id_search">'
                              '</td></tr>', str(response.context['form']))
 
     # product_autocomplete()
