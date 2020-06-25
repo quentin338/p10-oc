@@ -43,7 +43,8 @@ class Command(BaseCommand):
                 if api_prod_attr in {"code", "category"}:
                     continue
 
-                if hasattr(db_product, api_prod_attr):
+                if hasattr(db_product, api_prod_attr) \
+                        and getattr(db_product, api_prod_attr) != api_product[api_prod_attr]:
                     setattr(db_product, api_prod_attr, api_product[api_prod_attr])
                     db_product_updated = True
 
