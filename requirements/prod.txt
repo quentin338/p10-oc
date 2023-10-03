@@ -6,6 +6,6 @@ psycopg2==2.8.3
 pytz==2019.2
 requests==2.31.0
 sqlparse==0.4.4
-urllib3==1.26.5
+urllib3==1.26.17
 gunicorn==20.0.4
 django_extensions==2.2.9
